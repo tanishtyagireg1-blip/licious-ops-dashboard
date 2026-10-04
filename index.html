@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Licious Operations Management Dashboard</title><link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="dashboard_data.js"></script></head>
+<body><header class="hero"><div><div class="eyebrow">MBA Operations Management • Academic Project</div>
+<h1>Licious Operations Management Dashboard</h1><p>Demand forecasting, SKU risk segmentation and inventory-policy evaluation using a controlled synthetic dataset.</p></div><div class="badge">SYNTHETIC DATA</div></header>
+<main><section class="notice"><strong>Academic-use disclaimer:</strong> This dashboard uses synthetic data because proprietary Licious operational data are not publicly available. Results are analytical outputs for the submitted project and should not be interpreted as Licious's actual internal performance.</section>
+<section class="kpis" id="kpis"></section>
+<section class="grid two"><article class="card"><h2>Policy performance</h2><p class="muted">Service level and wastage rate across the three inventory policies.</p><canvas id="policyChart"></canvas></article>
+<article class="card"><h2>Relevant cost comparison</h2><p class="muted">Lower is better; cost includes wastage, lost-sales and holding components.</p><canvas id="costChart"></canvas></article></section>
+<section class="grid two"><article class="card"><h2>Forecast model performance</h2><p class="muted">Lower error values indicate better predictive accuracy.</p><canvas id="forecastChart"></canvas></article>
+<article class="card"><h2>Service-level sensitivity</h2><p class="muted">Increasing target service raises inventory and expected waste exposure.</p><canvas id="sensitivityChart"></canvas></article></section>
+<section class="grid two"><article class="card"><h2>SKU waste exposure</h2><p class="muted">Top 10 SKUs by simulated waste quantity.</p><canvas id="skuWasteChart"></canvas></article>
+<article class="card"><h2>SKU risk segmentation</h2><p class="muted">K-means cluster distribution across the 25-SKU synthetic assortment.</p><canvas id="clusterChart"></canvas></article></section>
+<section class="card"><h2>Policy summary</h2><div class="table-wrap"><table id="policyTable"></table></div></section>
+<section class="card"><h2>Key management takeaways</h2><div class="takeaways">
+<div><strong>01</strong><span>Forecast-based and risk-adjusted policies reduce relevant cost versus the baseline.</span></div>
+<div><strong>02</strong><span>The risk-adjusted policy prioritises waste control, while forecast-based replenishment achieves higher service.</span></div>
+<div><strong>03</strong><span>Higher service targets require more inventory and create greater expected waste exposure.</span></div>
+<div><strong>04</strong><span>SKU segmentation supports differentiated replenishment rather than a one-size-fits-all policy.</span></div></div></section>
+<footer><span>Licious Operations Management • MBA Project</span><span>Analytical period: Jan–Jun 2026 • Simulation: 15 May–11 Jun 2026</span></footer>
+</main><script src="dashboard.js"></script></body></html>
